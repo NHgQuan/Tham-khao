@@ -1,0 +1,13 @@
+Biểu đồ tần số tích lũy (cumulative frequency plots) biểu thị những thông tin dạng tích lũy. Nó thể hiện số lượng hay tỉ lệ những quan sát nhỏ hơn hoặc bằng một giá trị cụ thể.
+Biểu đồ tần số tương đối thể hiện nội dung y nguyên như biểu đồ tần số tích lũy , chỉ khác một điều đơn vị tính của các cột là tỉ lệ phần trăm.
+Biểu đồ phổ là thể hiện sự phân phối về số lượng của một tập dữ liệu.
+
+Một số thư viện cần dùng: ggplot2, agricolae, ggpubr, lubridate
+
+Các hàm thường sử dụng trong bài iv:
++ ggplot để vẽ biểu đồ
++ Hàm ggexport để xuất biểu đồ được vẽ bằng ggplots
++ Hàm strptime chuyển đổi ký tự thành ngày giờ
++ Hàm barplot để vẽ biểu đồ thanh
++ Hàm hist để vẽ biểu đồ tần số
++ Hàm max, min, sum trả về giá trị lớn nhất, nhỏ nhất, tổng của các giá trị nhập vào

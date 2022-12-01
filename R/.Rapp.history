@@ -1,0 +1,198 @@
+install.packages("languageserver")
+args(sample)
+help
+Html help
+q
+example(seq)
+seq(1, 9, by = pi)
+seq> seq(1, 9, by = pi)
+getwd()
+dir()
+setwd(/Users/lvtk/Desktop/Program/R)
+age <− c(45,47,54,50,43,53)
+?data.frame
+edit(data.frame())
+?sourve
+?source
+edit(data.frame())
+help()
+help.start()
+?input
+?plot
+example(plot)
+?intergrate
+?integrate
+p = function(k) k*k;
+p(1)
+p(5)
+plot(x, y = p(x))
+x=0:10
+plot(x, y = p(x))
+a <- edit (data.frame())
+1
+1#
+2
+1#
+2#
+4
+1#
+2#
+4#
+1
+1#
+2#
+4#
+1#
+a
+1#
+2#
+4#
+1#
+a#
+f
+?function
+help.start()
+x=1
+print(x)
+?names
+name(x)
+names(x)
+install.packages("readr")
+install.packages("xlsx")
+install.packages("dplyr")
+install.packages("ggplot2")
+library(ggplot2)
+library(xlsx)
+install.packages("xlsx")
+library(xlsx)
+?read.xlsx2
+read.xlsx
+?read.xlsx
+install.packages()
+library(xlsx)
+library(rjava)
+library(rJava)
+?read.csv
+?read.xlsx
+install.packages("openxlsx")
+install.packages("readxl")
+?read.xls
+?read.csv
+dplyr::glimpse(grads)
+library(ggplot2)
+help()
+help.start()
+help()
+help.start()
+install.package(stringr)
+install.packages(stringr)
+install.packages(devtools)
+install.packages("stringr")
+r.debugger.updateRPackage
+install.packages("vscDebugger")
+install.packages()
+library(vscDebugger)
+help.start()
+example(geom_histogram)
+load (ggplot2)
+library (ggplot2)
+example(geom_histogram)
+library (ggplot2)
+hist()
+?hist
+hist (c(1,2,3,3))
+?hist
+hist (c(1,2,3,3), main = "asdf")
+install.packages(“agricolae”)
+install.packages("agricolae")
+?ggplote
+?ggplot
+library(ggplot2)
+?ggplot
+example(barplot)
+nam <- c("a","b","c","d")
+values = c(4,5,6,7)
+barplot(values)
+barplot(values, names = nam, width = 5)
+nam <- c("a","b","c","d","e")
+barplot(values, names = nam, width = 5)
+nam <- c("a","b","c")
+barplot(values, names = nam, width = 5)
+example(barplot)
+barplot(values, names = nam, width = 5)
+nam <- c("a","b","c","d")
+barplot(values, names = nam, width = 5)
+barplot(values, names.arg = nam, width = 5)
+nam <- c("a","b","c")
+barplot(values, names.arg = nam, width = 5)
+nam <- c("a","b","c","d")
+barplot(values, names.arg = nam, width = 5)
+nam <- c("a","b","c","d","e")
+barplot(values, names.arg = nam, width = 5)
+# Load ggplot2#
+library(ggplot2)#
+#
+# Create data#
+data <- data.frame(#
+  name=c("A","B","C","D","E") ,  #
+  value=c(3,12,5,18,45)#
+  )#
+#
+# Barplot#
+ggplot(data, aes(x=name, y=value)) + #
+  geom_bar(stat = "identity")
+example(barplot)
+example (strptime)
+example(as.Date)
+install.packages ("lubridate")
+?day
+source ("/Users/lvtk/Desktop/Program/CTRR/R/task4/task4.R")
+setwd ("/Users/lvtk/Desktop/Program/CTRR/R")
+source ("/Users/lvtk/Desktop/Program/CTRR/R/task4/task4.R")
+c <- ggplot (data=caseAndDeath)
+c+geom_bar()
+c <- ggplot (data=caseAndDeath,aes (x=numCase))
+c+geom_bar()
+c <- ggplot (data=caseAndDeath,aes (y=numCase))
+c+geom_bar()
+plot (c)
+plot (c)
+c <- ggplot (data=caseAndDeath,aes (x=caseAndDeath [,c(2,3)] ) )
+plot (c)
+c+geom_bar()
+c <- ggplot (data=caseAndDeath,aes (x= append (numCase,numDeath) ))
+plot(c)
+c <- ggplot (data=caseAndDeath,aes (x=numCase))
+plot(c)
+numCase
+c <- ggplot (data=caseAndDeath,aes (numCase, numDeath))
+plot(c)
+c <- ggplot (data=caseAndDeath,aes( rbind(numCase, numDeath)))
+plot(c)
+c <- ggplot (data=caseAndDeath,aes (x=numCase, x=numDeath))
+c <- ggplot (data=caseAndDeath)
+plot(c)
+c <- ggplot (data=caseAndDeath) + geom_bar()
+plot(c)
+example (geom_bar)
+c <- ggplot (aes y= append (numCase,numDeath) ))
+deathTable <- ggplot (caseAndDeath, aes(x = lastest7days, y = numDeath ) ) +#
+        geom_bar(stat = "identity", fill = "blue")
+plot (deathTable)
+a <- rotate_x(caseAndDeath,'numDeath', lastest7days, 45 )
+deathTable <- ggplot (caseAndDeath, aes(x = lastest7days, y = numDeath ) ) +#
+        geom_bar(fill = "blue")
+plot(deathTable)
+deathTable <- ggplot (caseAndDeath) +#
+        geom_bar(aes(x = lastest7days, y = numDeath )  , fill = "blue")
+plot(deathTable)
+deathTable <- ggplot (caseAndDeath, aes(x = lastest7days, y = numDeath )) +#
+        geom_bar(aes(x = lastest7days, y = numDeath )  , fill = "blue")
+plot(deathTable)
+example (geom_bar)
+example (geom_bar)
+example (geom_bar)
+deathTable <- ggplot (caseAndDeath) +#
+        geom_bar(aes(numCase))
+plot(deatTable)
+plot(deathTable)

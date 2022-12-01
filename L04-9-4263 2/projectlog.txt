@@ -1,0 +1,34 @@
+Sổ tay lưu lại quá trình làm bài tập lớn
+
+----------------------------------------------------------------------------------------------------------------------
+Phân chia nhiệm vụ:
+
+Tổ xử lý dữ liệu (code R):
+	Lê Văn Tuấn Kiệt đảm nhận nhóm câu hỏi 1,2,4
+	Nguyễn Hồng Quân xử lý nhóm câu hỏi 3,6
+	Từ Huy Bảo làm việc với nhóm câu hỏi 5,7,10(2)
+	Phan Lê Nhật Minh (trưởng nhóm) giải quyết các nhóm câu hỏi 8,9,10(4,6)
+
+Tổ tạo file slide báo cáo (code LaTeX):
+	Dương Ngọc Ân soạn thảo nhóm bài làm từ 1 đến 5 và hoàn thiện bản báo cáo
+	Cù Hoàng Nguyễn Sơn trình bày nhóm bài làm từ 6 đến 10 và hoàn thiện bản báo cáo
+
+Video thuyết trình:
+	Từng thành viên tổ R đã quay video trình bày câu hỏi tương ứng với nhiệm vụ của mình
+	Cù Thanh Sơn giới thiệu mở đầu
+	Lê Văn Tuấn Kiệt trình bày câu hỏi 1,2,4
+	Nguyễn Hồng Quân trình bày nhóm câu hỏi 3,6
+	Từ Huy Bảo làm việc trình bày nhóm câu hỏi 5,7,10(2)
+	Phan Lê Nhật Minh (trưởng nhóm) trình bày nhóm câu hỏi 8,9,10(4,6)
+	Dương Ngọc Ân kết thúc buổi thuyết trình
+
+----------------------------------------------------------------------------------------------------------------------
+Nhóm đã sử dụng phần mềm quản lý Git để quản lý project, cập nhật nhiệm vụ,...
+sử dụng lưu trữ điện toán đám mây của phần mềm Git để thuận tiện lưu dữ liệu, file bài làm, file báo cáo,....
+Đồng thời nhóm còn sử dụng ứng dụng nhắn tin Messenger để tiện trao đổi các thông tin cần thiết, 
+ứng dụng họp trực tuyến Google Meet để tổ chức bàn kế hoạch, thảo luận.
+
+----------------------------------------------------------------------------------------------------------------------
+Tất cả thành viên đã cùng nhau nỗ lực hết mình vì nhiệm vụ, hoàn thành đúng mục tiêu và đúng thời hạn công việc
+Tuy vậy nhóm vẫn còn nhiều thiếu sót nhưng qua BTL lần này cả nhóm đã có tinh thần trách nhiệm, tích lũy được kinh nghiệm, kiến thức bổ ích cho những project sau này
+

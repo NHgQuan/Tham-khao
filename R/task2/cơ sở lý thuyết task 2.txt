@@ -1,0 +1,16 @@
+Tứ phân vị là đại lượng mô tả sự phân bố và sự phân tán của tập dữ liệu. 
+Tứ phân vị có 3 giá trị, đó là tứ phân vị thứ nhất, thứ nhì, và thứ ba. 
+Ba giá trị này chia một tập hợp dữ liệu (đã sắp xếp dữ liệu theo trật từ từ bé đến lớn) thành 4 phần có số lượng quan sát đều nhau (=25% số kết quả quan sát)
+Giá trị tứ phân vị thứ hai Q2 chính bằng giá trị trung vị
+Giá trị tứ phân vị thứ nhất Q1 bằng trung vị phần dưới
+Giá trị tứ phân vị thứ ba Q3 bằng trung vị phần trên
+
+Trong thống kê mô tả, độ lệch chuẩn là thước đo độ phân tán của một tập hợp các giá trị so với giá trị trung bình của chúng. Độ lệch chuẩn của 1 giá trị càng thấp nghĩa là giá trị đó càng gần với giá trị trung bình của tập hợp.
+
+Biểu đồ hộp (Box plot) là biểu đồ diễn tả 5 vị trí phân bố của dữ liệu, đó là: giá trị nhỏ nhất (min), tứ phân vị thứ nhất (Q1), trung vị (median), tứ phân vị thứ 3 (Q3) và giá trị lớn nhất (max).
+
+Các hàm thường sử dụng trong bài ii:
++ Hàm names dùng để đặt lại tên cho một đối tượng
++ Hàm summary cho ta một bảng bao gồm giá trị lớn nhất, nhỏ nhất, tứ phân vị, độ lệch chuẩn, outlier của bảng dữ liệu đầu vào
++ Hàm rownames và colnames để đặt lại tên cho hàng, cột của bảng dữ liệu
++ Hàm boxplot để vẽ biểu đồ boxplot

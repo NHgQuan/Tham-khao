@@ -1,0 +1,16 @@
+Giai đoạn trước đó:
++ Lưu bảng dữ liệu thô vào biến bigTable
++ Lưu bảng dữ liệu sau khi lọc bớt các hàng không có châu lục vào biến tableNoNull
++ Lưu các biến này vào preTask.RData bằng câu lệnh save.image("workspace/preTask.RData") để có thể tái sử dụng.
+
+cài đặt một số packages: readr, ggplot2, stringr, dplyr.
+Một số hàm quan trọng được dùng trong bài i:
++ Hàm str_sub để trích xuất các phần tử cuối của một chuỗi ký tự.
++ Hàm unique để lọc các dữ liệu trùng nhau
++ Hàm write và write.csv để ghi file
++ Hàm subset để trích xuất một bảng dữ liệu con với một điều kiện nào đó
++ Hàm append để thêm một phần tử vào một vector
++ Hàm tail và head trả về một số phần tử cuối cùng, hoặc phần tử đầu tiên của vector, list, khung dữ liệu,...
++ Hàm length lấy hoặc ghi độ dài của vector
++ Hàm data.frame để nhập hai khung dữ liệu lại thành một
+Cuối cùng, lưu lại các biến để có thể tái sử dụng bằng save.image

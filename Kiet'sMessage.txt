@@ -1,0 +1,9 @@
+Có những lời nhắn không nhắn được trên Messenger vì t sợ trôi.
+Mọi người vào đây đọc nhé.
+Thân.
+
+i5678 phần tổng hợp số liệu có thể viết thành một hàm để sử dụng lại nhiều lần được không?
+
+i16 vẫn còn bị lỗi, đó chỉ là một vòng lặp thuật toán sort đơn giản thôi, ai sửa được không?
+
+ta cần phải cẩn thận hơn khi xoá OWID ra ngoài, những task có châu lục thì nên loại, những task tính quốc gia thì không nên loại

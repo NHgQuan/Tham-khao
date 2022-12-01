@@ -1,0 +1,52 @@
+Câu 8: MADE 4263
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+.........Cơ sở lý thuyết...........
+Nghiên cứu tình trạng nhiễm bệnh và tử vong tích lũy theo thời gian là tháng
+tất cả quốc gia vào 4 tháng 2, 3, 4, 6
+
+****Sử dụng ngôn ngữ lập trình R để chọn lọc dữ liệu****
+
+Lọc và xử lý dữ liệu có iso_code là OWID_WRL,
+ta được các thông tin cần thiết về số ca mắc mới và số ca tử vong 
+do COVID-19 trên thế giới.
+
+****Sử dụng ngôn ngữ lập trình R để tính toán:****
+
+Bảng giá trị trung bình 7 ngày gần nhất (TB) của một dãy số A được tính như sau:
+TB[1]: nhận A[1]
+TB[2]: lấy giá trị trung bình của A[1], A[2]
+TB[3]: lấy giá trị trung bình của A[1], A[2], A[3]
+.
+.
+.
+TB[7]: lấy giá trị trung bình của A[1], A[2], ..., A[7]
+TB[i] (i>7): lấy giá trị trung bình của A[i-6], A[i-5], ..., A[i]
+
+Từng bước khởi gán các giá trị tổng số ca nhiễm, ca tử theo tháng
+sau đó tính trung bình 7 ngày gần nhất của từng ngày và đồng thời tạo bảng giá trị 
+theo từng tháng, từng năm và từng nhóm câu hỏi của đề bài.
+
+****Sử dụng các lệnh của ngôn ngữ R để vẽ biểu đồ cho từng nhóm câu hỏi****
+
+đầu tiên, tạo các biến cần thiết
+ggplot(NULL, aes(<các ngày>, <số ca mới>)): khởi tạo hệ trục Oxy với các miền giá trị tương ứng Ox, Oy
+geom_line(data = <new>, col = "<colour>"): vẽ đường biểu diễn các ca mới (new) trong tháng , có màu là (colour)
+labs(title = "<tên biểu đồ>", x = "<tên trục Ox>", y = "<tên trục Oy>"): thêm nhãn cho biểu đồ
+
+tiếp theo, kết hợp các biến vào một để tạo biểu đồ
+graph_cases_<tháng hiện tại> <- ggplot() + geom_line() + labs(): tạo biểu đồ theo tháng đang tính toán (4 tháng tất cả) 
+
+cuối cùng, lưu các biểu đồ vừa tạo vào một file lưu trữ
+Ví dụ:
+ggsave( filename = "task8_subtask1_case_2020.pdf",
+        plot = ggarrange(graph_cases_thangHai, graph_cases_thangBa, graph_cases_thangTu, 
+	graph_cases_thangSau, nrow = 4, ncol = 1, common.legend = TRUE),
+        scale = 1,
+        width = 10,
+        height = 25,
+        units = c("in"),
+        dpi = 300)
+----> tạo file có tên "task8_subtask1_case_2020.pdf" lưu số ca mới trong năm 2020 theo yêu cầu tiểu câu hỏi 1
+với 4 biểu đồ riêng biệt của 4 tháng 2,3,4,6 xếp dọc 4 hàng 1 cột, tỉ lệ phóng đại 1.0, chiều rộng 10 inch, chiều cao 25 inch
+
+(Có sử dụng thêm các lệnh trên biểu đồ để trang trí, hiệu chỉnh)

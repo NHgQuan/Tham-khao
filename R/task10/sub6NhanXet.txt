@@ -1,0 +1,12 @@
+Các mốc bùng phát bệnh dịch lớn nhât của các quốc gia là:
+
+CANADA
+2021-12-20
+GREENLAND
+NULL
+USA
+2021-12-28
+
+Dễ dàng nhận thấy 2 nước Canada và Hoa kỳ có cùng khoảng thời gian bắt đầu bùng phát bệnh dịch vào cuối năm ngoái (2021)
+Đây cũng là thời điểm 2 nước này có kì nghỉ lễ đặc biết nhất trong năm (Lễ Giáng Sinh và chuẩn bị qua năm mới).
+Do đó, từ tháng 12 năm 2021 đến tháng 1 năm 2022, số ca nhiễm bệnh đã tăng không kiểm soát, với số ca nhiễm cao nhất trong 1 ngày đã tăng gấp 10 lần so với trước khi bệnh dịch bùng nổ. 

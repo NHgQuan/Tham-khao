@@ -1,0 +1,6 @@
+Cơ sở lý thuyết về bùng phát bệnh dịch:
+
+Lấy k làm mốc để xác định khoảng thời gian bùng phát
+Với k là khi số ca nhiễm bệnh tăng đột biến trên khoảng 200% so với 20 ngày trước, thì ta sẽ coi đó là lúc bùng phát bệnh dịch
+
+Từ đó, sử dụng ngôn ngữ lập trình R để chỉ ra các thời điểm bắt đầu bùng phát

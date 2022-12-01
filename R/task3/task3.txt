@@ -1,0 +1,246 @@
+
+> #############################################################
+> # 1)number of days without report
+> 
+> # NEW CASES#
+> # manipulative function
+> ndwi .... [TRUNCATED] 
+
+> # Canada
+> ndwithoutrpcases(name.country[1])
+[1] 0
+
+> # Greenland
+> ndwithoutrpcases(name.country[2])
+[1] 0
+
+> # United States
+> ndwithoutrpcases(name.country[3])
+[1] 1
+
+> # NEW DEATHS#
+> # manipulative function
+> ndwithoutrpdeaths <- function(name) {
++   select <- covid.data$location == name
++   ndays <- 0
++   covid.d .... [TRUNCATED] 
+
+> # Canada
+> ndwithoutrpdeaths(name.country[1])
+[1] 43
+
+> # Greenland
+> ndwithoutrpdeaths(name.country[2])
+[1] 651
+
+> # United States
+> ndwithoutrpdeaths(name.country[3])
+[1] 38
+
+> cau1 <- data.frame(c("Country", "Canada", "Greenland", "United States"),
++                    c("New cases", ndwithoutrpcases(name.country[1]), ndwi .... [TRUNCATED] 
+
+> export(cau1, "cau1.csv")
+
+> #############################################################
+> # 2)number of lowest days at that time
+> 
+> # NEW CASES#
+> # manipulative function
+> .... [TRUNCATED] 
+
+> # Canada
+> nlowestdayscases(name.country[1])
+[1] 1
+
+> # Greenland
+> nlowestdayscases(name.country[2])
+[1] 2
+
+> # United States
+> nlowestdayscases(name.country[3])
+[1] 0
+
+> # NEW DEATHS#
+> # manipulative function
+> nlowestdaysdeaths <- function(name) {
++   select <- covid.data$location == name
++   covid.data.location <- .... [TRUNCATED] 
+
+> # Canada
+> nlowestdaysdeaths(name.country[1])
+[1] 2
+
+> # Greenland
+> nlowestdaysdeaths(name.country[2])
+[1] 1
+
+> # United States
+> nlowestdaysdeaths(name.country[3])
+[1] 1
+
+> #############################################################
+> # 3)number of highest days at that time
+> 
+> # NEW CASES#
+> # manipulative function
+ .... [TRUNCATED] 
+
+> # Canada
+> nhighestdayscases(name.country[1])
+[1] 42
+
+> # Greenland
+> nhighestdayscases(name.country[2])
+[1] 19
+
+> # United States
+> nhighestdayscases(name.country[3])
+[1] 61
+
+> # NEW DEATH#
+> # manipulative function
+> nhighestdaysdeaths <- function(name) {
++   select <- covid.data$location == name
++   covid.data.location <- .... [TRUNCATED] 
+
+> # Canada
+> nhighestdaysdeaths(name.country[1])
+[1] 24
+
+> # Greenland
+> nhighestdaysdeaths(name.country[2])
+[1] 1
+
+> # United States
+> nhighestdaysdeaths(name.country[3])
+[1] 34
+
+> #############################################################
+> # 4)Tables
+> 
+> # MISSING VALUE#
+> covid.data.NA <- subset(covid.data, subset = (cov .... [TRUNCATED] 
+
+> covid.data.NA <- data.frame(covid.data.NA$location, covid.data.NA$new_cases, covid.data.NA$new_deaths)
+
+> names(covid.data.NA) <- c("Countries", "Infections", "Deaths")
+
+> # NEW REPORT#
+> covid.data.newreport <- subset(covid.data, subset = (covid.data$location == name.country[1] | covid.data$location == name.country[2] .... [TRUNCATED] 
+
+> covid.data.newreport <- data.frame(covid.data.newreport$location, covid.data.newreport$new_cases, covid.data.newreport$new_deaths)
+
+> names(covid.data.newreport) <- c("Countries", "Infections", "Deaths")
+
+> #############################################################
+> # 5)the Shortest number of consecutive days with no data report
+> 
+> # NEW CASES#
+>  .... [TRUNCATED] 
+
+> # Canada
+> short.ds.no.report.cases(name.country[1])
+[1] 0
+
+> # Greenland
+> short.ds.no.report.cases(name.country[2])
+[1] 0
+
+> # United States
+> short.ds.no.report.cases(name.country[3])
+[1] 1
+
+> # NEW DEATHS#
+> # manipulative function
+> short.ds.no.report.deaths <- function(name) {
++   # select country
++   select <- covid.data$location == na .... [TRUNCATED] 
+
+> # Canada
+> short.ds.no.report.deaths(name.country[1])
+[1] 43
+
+> # Greenland
+> short.ds.no.report.deaths(name.country[2])
+[1] 651
+
+> # United States
+> short.ds.no.report.deaths(name.country[3])
+[1] 38
+
+> #############################################################
+> # 6)the longest number of consecutive days with no data report
+> 
+> # NEW CASES#
+> # .... [TRUNCATED] 
+
+> # Canada
+> longest.ds.no.report.cases(name.country[1])
+[1] 0
+
+> # Greenland
+> longest.ds.no.report.cases(name.country[2])
+[1] 0
+
+> # United States
+> longest.ds.no.report.cases(name.country[3])
+[1] 1
+
+> # NEW DEATHS#
+> # manipulative function
+> longest.ds.no.report.deaths <- function(name) {
++   # select country
++   select <- covid.data$location ==  .... [TRUNCATED] 
+
+> # Canada
+> longest.ds.no.report.deaths(name.country[1])
+[1] 43
+
+> # Greenland
+> longest.ds.no.report.deaths(name.country[2])
+[1] 651
+
+> # United States
+> longest.ds.no.report.deaths(name.country[3])
+[1] 38
+
+> #############################################################
+> # 7)the shortest number of consecutive days with no new infections
+> # change missin .... [TRUNCATED] 
+
+> # manipulative function
+> shortest.ds.no.infections <- function(name) {
++   # select country
++   select <- covid.data$location == name
++   covid.dat .... [TRUNCATED] 
+
+> # Canada
+> shortest.ds.no.infections(name.country[1])
+[1] 1
+
+> # Greenland
+> shortest.ds.no.infections(name.country[2])
+[1] 1
+
+> # United States
+> shortest.ds.no.infections(name.country[3])
+[1] 1
+
+> #############################################################
+> # 8)the longest number of consecutive days with no new infections
+> # manipulative f .... [TRUNCATED] 
+
+> # Canada
+> longest.ds.no.infections(name.country[1])
+[1] 9
+
+> # Greenland
+> longest.ds.no.infections(name.country[2])
+[1] 75
+
+> # United States
+> longest.ds.no.infections(name.country[3])
+[1] 7
+
+> sink()

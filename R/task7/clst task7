@@ -1,0 +1,108 @@
+Đầu tiên ta lấy dữ liệu từ file owid-covid-data vào dataRaw và lọc lại các dữ liệu của tất cả 18 quốc gia trong đề vào dataMade:
+x <- length(dataRaw$continent)
+
+MADEcountry <- c("KEN","LSO","MAR","IDN","JPN","VNM","AND","SVN",
+                 "GBR", "CAN", "GRL", "USA", "AUS", "NCL", "NZL", "BRA", "CHL", "VEN")
+dataMade <- dataRaw[0,]
+y <- 0
+
+for (ctry in 1:18) 
+  for (i in 1 : x)
+  {
+    if (stri_sub(dataRaw$iso_code[i], -3) == MADEcountry[ctry])
+    {
+      y <- y + 1
+      dataMade[y,] <- dataRaw[i,]
+    }
+  }
+Câu 1:
+Tạo các vector ngày tháng cần thiết để lọc dữ liệu theo thời gian là tháng
+    data_month <- c(2, 3, 4, 6,  2, 3, 4, 6, 2)
+    data_year <- c(2020, 2020, 2020, 2020, 2021, 2021, 2021, 2021, 2022)
+    
+Tạo 1 vector có chiều dài là 162 để lưu dữ liệu nhiễm bệnh theo từng tháng của tất cả các quốc gia
+    new_cases_1  <- c(1:162)
+Chạy vòng lặp với điều kiện để lưu dữ liệu cần thiết vào vector new_cases_1
+    d <- 0
+    for (j in 1 : 9) {
+      for (c in 1:18) {
+        curYear <- data_year[j]
+        curMonth <- data_month[j]
+        sum <- 0
+        for (i in 1 : x)
+        {
+          if (dataMade$iso_code[i] == MADEcountry[c])
+          {
+            k <- as.Date(dataMade$date[i], format = "%m/%d/%Y")
+            if (month(k) == curMonth)
+              if (year(k) == curYear)
+                sum <- sum + dataMade$new_cases[i]
+
+          }
+        }
+        d <- d + 1
+        new_cases_1[d] <- sum
+        sum <- 0
+      }
+    }
+Kết hợp vector trên với vector tháng năm tạo thành bảng dữ liệu nhiễm bệnh theo thời gian là tháng của tất cả các nước
+    dataCom1 <- data.frame(data_month_year, countryname, new_cases_1)
+Vẽ biểu đồ thể hiện thu thập dữ liệu nhiễm bệnh cho từng tháng dựa vào bảng trên
+    dataCom1 <- transform(dataCom1, Group=paste(countryname, new_cases_1, sep = ""))
+    ggplot(dataCom1, aes(x = data_month_year, y = new_cases_1, fill = countryname)) +
+      geom_bar(stat= "identity") +
+      labs(title = "New cases in all of countries in months", x= "Date", y = "New cases") 
+
+
+Câu 2:
+Tương tự câu 1, chỉ cần thay dữ liệu nhiễm bệnh thành tử vong
+
+Câu 3, 4:
+Tương tự câu 1, 2 chỉ cần thay vector tháng thành 2 tháng cuối năm và thay vector năm theo số tháng tương ứng
+
+Câu 5:
+Đầu tiên, tạo và lưu dữ liệu tích lũy nhiễm bệnh theo ngày trong 2 tháng cuối năm vào vector có độ dài 61
+VD:Tạo và lưu dữ liệu tích lũy nhiễm bệnh của tất cả các quốc gia theo ngày trong 2 tháng cuối năm 2020
+    new_case5 <- c(1:61)
+    y <- 0
+    sum <- 0
+    for (j in 1 : 61)
+    {
+      curYear <- data_year6[j]
+      curMonth <- data_month6[j]
+      curDay <- data_day6[j]
+      for (c in 1:18)
+      {
+        for (i in 1 : x)
+        {
+          if (dataMade$iso_code[i] == MADEcountry[c])
+          {
+            k <- as.Date(dataMade$date[i], format = "%m/%d/%Y")
+            if (month(k) == curMonth)
+              if (year(k) == curYear)
+                if (day(k) == curDay)
+                {
+                  sum <- sum + dataMade$new_cases[i]
+                }
+          }
+        }
+      }
+      y <- y + 1
+      new_case5[y] <- sum
+    }
+Tiếp theo, tạo vector có độ dài tương ứng để lưu dữ liệu nhiễm bệnh tương đối tích lũy theo thời gian là tháng bằng cách chia tất cả giá trị cho giá trị cuối cùng
+    VD: Dữ liệu nhiễm bệnh tương đối tích lũy theo thời gian là 2 tháng cuối của năm của tất cả quốc gia vào năm 2020
+    mat_new_case5_2 <- t(t(new_case5_2) / new_case5_2[61])
+Cuối cùng, tạo bảng dữ liệu và vẽ biểu đồ
+    VD: Biểu đồ thể hiện thu thập dữ liệu nhiễm bệnh tương đối tích lũy theo thời gian là 2 tháng cuối của năm của tất cả quốc gia vào năm 2020
+    mat_new_case5_2 <- t(t(new_case5_2) / new_case5_2[61])
+    data5_2 <- data.frame(date2, mat_new_case5_2)
+    ggplot(data = data5_2, mapping = aes(x = date1, y = mat_new_case5_2)) + geom_line(color = "red", size = 1.2) +
+      theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+            panel.background = element_blank(), axis.line = element_line(colour = "black")) +
+      labs(title = "Ratio of new cases in 2 last months in 2021", x= "Date", y = "Ratio") 
+      
+Năm 2021 làm tương tự
+
+Câu 6:
+Làm tương tự câu 5

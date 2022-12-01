@@ -1,0 +1,62 @@
+Câu 9: MADE 4263
+
+****Cơ sở lý thuyết****
+
+///BEGIN///
+?????Correlation Coefficient là gì?????
+
+Hệ số tương quan là một thước đo thống kê về độ mạnh yếu của mối quan hệ giữa các chuyển động tương đối của hai biến. Các giá trị nằm trong khoảng từ -1,0 đến 1,0. Một số được tính toán lớn hơn 1,0 hoặc nhỏ hơn -1,0 có nghĩa là đã xảy ra lỗi trong phép đo tương quan. Tương quan -1,0 cho thấy mối tương quan âm tuyệt đối, trong khi mức tương quan 1,0 cho thấy mối tương quan dương tuyệt đối. Tương quan 0,0 cho thấy không có mối quan hệ tuyến tính giữa chuyển động của hai biến. 
+
+Có một số loại hệ số tương quan, nhưng loại phổ biến nhất là hệ số tương quan Pearson (R), hệ số này chỉ ra độ mạnh và hướng của quan hệ tuyến tính giữa hai biến. Đây cũng là hệ số sẽ được sử dụng để tính toán trong phần trình bày này.
+
+Giá trị chính xác bằng 1,0 có nghĩa là có một mối quan hệ dương tuyệt đối giữa hai biến. Đối với một biến số tăng dương, thì biến số thứ hai cũng tăng dương. Giá trị -1,0 có nghĩa là có một mối quan hệ âm tuyệt đối giữa hai biến. Điều này cho thấy rằng các biến chuyển động ngược chiều nhau - đối với một biến số tăng dương thì biến số thứ hai sẽ giảm xuống. Nếu mối tương quan giữa hai biến là 0 thì kết luận không có mối quan hệ tuyến tính giữa chúng.
+
+Độ mạnh của mối quan hệ thay đổi theo mức độ dựa trên giá trị của hệ số tương quan. Ví dụ, giá trị 0,2 cho thấy có mối tương quan dương giữa hai biến, nhưng nó yếu và có thể không quan trọng. Các nhà phân tích trong một số lĩnh vực nghiên cứu không coi các mối tương quan là quan trọng cho đến khi giá trị vượt qua ít nhất 0,8. Tuy nhiên, hệ số tương quan có giá trị tuyệt đối từ 0,9 trở lên sẽ thể hiện một mối quan hệ rất chặt chẽ
+
+Trong bài báo cáo này, một mối quan hệ giữa hai biến được coi là:
+Mạnh (Strong) nếu trị tuyệt đối hệ số tương quan giữa chúng lớn hơn 0.7,
+Trung bình (Moderate) nếu trị tuyệt đối hệ số tương quan giữa chúng lớn hơn 0.5 và bé hơn hoặc bằng 0.7,
+Yếu (Weak) nếu trị tuyệt đối hệ số tương quan giữa chúng lớn hơn 0.3 và bé hơn hoặc bằng 0.5,
+Rất Yếu (Very Weak) nếu trị tuyệt đối hệ số tương quan giữa chúng bé hơn hoặc bằng 0.3,
+///END///
+
+Nghiên cứu tình trạng nhiễm bệnh và tử vong tích lũy theo thời gian là tháng
+của 3 nước theo MADE vào 4 tháng 2, 3, 4, 6
+
+Lọc và xử lý dữ liệu có iso_code là CAN, GRL, USA
+ta được các thông tin cần thiết về số ca mắc mới và số ca tử vong 
+do COVID-19 tại các nước Canada, Greenland, Hoa kỳ.
+
+****Sử dụng ngôn ngữ lập trình R để tính toán:****
+
+Từng bước khởi gán các giá trị tổng số ca nhiễm, ca tử theo tháng
+sau đó tính tổng tích lũy từng ngày đồng thời lập bảng tỉ lệ phần trăm trên tổng số ca
+
+Sử dụng hàm cor(x, y, "pearson") để tính Pearson coefficient correlation giữa 2 biến, 
+sau đó kết hợp kết quả với nhận xét về độ mạnh của mối tương quan đưa vào biểu đồ của subtask1 
+
+****Sử dụng các lệnh của ngôn ngữ R để vẽ biểu đồ****
+
+đầu tiên, tạo các biến cần thiết
++ ggplot(NULL, aes(<các ngày>, <số ca mới>)): khởi tạo hệ trục Oxy với các miền giá trị tương ứng Ox, Oy
++ geom_area(data = <new>, col = "<colour>"): vẽ miền biểu diễn các ca mới (new) trong tháng , có màu là (colour)
++ labs(title = "<tên biểu đồ>", x = "<tên trục Ox>", y = "<tên trục Oy>"): thêm nhãn cho biểu đồ
++ annotate(geom = "<kiểu chú thích>", x = <tọa độ x>, y = <tọa độ y>, ...): thêm chú thích cho biểu đồ
+
+tiếp theo, kết hợp các biến vào một để tạo biểu đồ
+graph_cases_<tháng hiện tại> <- ggplot() + geom_area() + labs() + annotate(): tạo biểu đồ theo tháng đang tính toán (4 tháng tất cả) 
+
+cuối cùng, lưu các biểu đồ vừa tạo vào một file lưu trữ
+Ví dụ:
+ggsave( filename = "task9_subtask1_Canada_news_2020.pdf",
+        plot = ggarrange(graph_cases_thangHai, graph_cases_thangBa, graph_cases_thangTu, 
+	graph_cases_thangSau, nrow = 4, ncol = 1, common.legend = TRUE),
+        scale = 1,
+        width = 10,
+        height = 25,
+        units = c("in"),
+        dpi = 300)
+----> tạo file có tên "task9_subtask1_Canada_news_2020.pdf" lưu số ca mới trong năm 2020 theo yêu cầu tiểu câu hỏi 1
+với 4 biểu đồ riêng biệt của 4 tháng 2,3,4,6 xếp dọc 4 hàng 1 cột, tỉ lệ phóng đại 1.0, chiều rộng 10 inch, chiều cao 25 inch
+
+(Có sử dụng thêm các lệnh trên biểu đồ để trang trí, hiệu chỉnh)
